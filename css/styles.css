@@ -1,0 +1,190 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: sans-serif;
+    position: relative;
+    margin: 0;
+    padding: 40px 0;
+    min-height: 100%;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+h1 {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+h4 {
+    font-size: 1.1em;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.search {
+    width: 30%;
+    min-width: 300px;
+    height: 50px;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.employees {
+    margin: 40px 0;
+}
+
+.employee {
+    display: inline-block;
+    margin-bottom: 25px;
+    width: 100%; 
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    transition: 0.4s all;
+}
+
+.employee:hover {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.employee-icon {
+    display: inline-block;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.employee-info {
+    display: inline-block;
+    width: calc(100% - 105px);
+    vertical-align: top;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.employee-info span {
+    display: block;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.employee-info h4, .employee-info span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/******************
+     MODAL
+******************/
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.65);
+    transition: all 0.3s;
+    display: none;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+}
+
+.modal {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    width: 85%;
+    margin: 110px auto;
+    max-width: 350px;
+    padding: 40px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal .employee-icon, .modal .employee-info {
+    display: block;
+    margin: 0 auto;
+}
+
+.modal .employee-icon {
+    margin-bottom: 10px;
+}
+
+.modal .employee-info {
+    width: 100%;
+    padding-left: 0;
+}
+
+.modal .employee-info span {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.modal hr {
+    margin: 25px 0;
+}
+
+.changers {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.change {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+/******************
+    RESPONSIVE 
+******************/
+@media screen and (min-width: 760px) and (max-width: 1079px) {
+    .employee {
+        width: 48%;
+    }
+    .employee:nth-of-type(2n - 1) {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .employee {
+        width: 30%;
+    }
+    .employee:nth-of-type(3n - 2), .employee:nth-of-type(3n - 1) {
+        margin-right: 3%;
+    }
+}
